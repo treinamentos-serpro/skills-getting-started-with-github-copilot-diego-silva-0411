@@ -142,6 +142,8 @@ document.addEventListener("DOMContentLoaded", () => {
     } catch (error) {
       messageDiv.textContent = error.message || "Unable to remove participant";
       messageDiv.className = "error";
+    } finally {
+      removeButton.disabled = false;
     }
 
     messageDiv.classList.remove("hidden");
